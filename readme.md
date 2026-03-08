@@ -1,5 +1,14 @@
 # Social Media Graph Analytics with GraphRAG
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Neo4j](https://img.shields.io/badge/GraphDB-Neo4j-green)
+![OpenAI](https://img.shields.io/badge/AI-GPT-orange)
+![Graph Analytics](https://img.shields.io/badge/Analytics-Network%20Science-purple)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+
+
+
 This project analyzes user behavior in a social media tagging system using **graph analytics and GraphRAG**.
 
 The system builds a **user similarity network** based on shared tag adoption and studies **homophily and influence patterns** in the network.
@@ -79,6 +88,50 @@ The system combines **large-scale data processing, graph analytics, and AI-power
 
 5. **GPT API Integration**  
    Converts natural language questions into graph queries.
+
+
+## End-to-End Pipeline
+
+The project follows a complete data-to-AI pipeline combining large-scale data processing, graph analytics, and AI-powered querying.
+
+![Project Pipeline](diagrams/architecture.png)
+
+### Pipeline Steps
+
+1. **Data Collection**
+   - Social media tagging dataset collected from Kaggle
+   - Contains user interactions with tags over time
+
+2. **Data Preprocessing (Python / Colab)**
+   - Cleaned and filtered large-scale user-tag interactions
+   - Created user-tag adoption matrix
+   - Reduced dataset size to manageable graph scale
+
+3. **User Similarity Computation**
+   - Computed **Jaccard similarity** between users based on shared tags
+   - Applied strict filtering to retain meaningful relationships
+   - Generated similarity edge dataset
+
+4. **Graph Construction**
+   - Nodes created for **Users** and **Tags**
+   - Relationships created for:
+     - `ADOPTED`
+     - `SIMILAR_TO`
+
+5. **Graph Storage in Neo4j**
+   - Graph data imported into Neo4j
+   - Cypher queries used for graph analysis
+
+6. **Graph Analytics**
+   - Network connectivity analysis
+   - Homophily detection
+   - Influence analysis
+
+7. **GraphRAG System**
+   - GPT interprets user questions
+   - Generates Cypher queries
+   - Queries Neo4j graph
+   - Returns interpreted insights
 
 ---
 
@@ -204,22 +257,32 @@ Users are significantly more likely to adopt tags previously used by their neigh
 ---
 
 # Repository Structure
+
 social-media-graph-analytics-graphrag
 │
 ├── notebooks
-│ └── Social_Medial_Final_Updated.ipynb
+│   └── Social_Medial_Final.ipynb
 │
 ├── python
-│ └── gptapi.py
+│   ├── graphrag.py
+│   └── gptapi.py
+│
+├── neo4j
+│   ├── cypher_queries.cypher
+│   ├── graph_schema.md
+│   └── import_instructions.md
 │
 ├── diagrams
-│ ├── architecture.png
-│ ├── graph_schema.png
-│ ├── network_visualization.png
-│ └── graphrag_demo.png
+│   ├── architecture.png
+│   ├── graph_schema.png
+│   ├── network_visualization.png
+│   └── graphrag_demo.png
 │
-├── README.md
+├── data
+│   └── dataset_info.md
+│
 ├── requirements.txt
+└── README.md
 
 
 
@@ -259,4 +322,23 @@ User 127339 – 28 connections
 
 
 
+### GraphRAG Interactive Demo
+
+Below is an example interaction with the GraphRAG system.
+
+![GraphRAG Demo](diagrams/graphrag_demo.png)
+
 The system converts natural language questions into **Cypher queries executed on the Neo4j graph database**.
+
+
+## Key Contribution;:
+
+
+• Construction of a **user similarity network** from large social media interaction data  
+• Graph modeling of **user-tag relationships** and behavioral similarity  
+• Analysis of **homophily and influence patterns** in the network  
+• Integration of **Neo4j graph database with GPT-powered GraphRAG querying**  
+• Development of an **interactive natural language interface for graph exploration**
+
+
+This project demonstrates how **graph analytics and large language models can be combined** to analyze large-scale social networks.
