@@ -261,25 +261,25 @@ Users are significantly more likely to adopt tags previously used by their neigh
 social-media-graph-analytics-graphrag
 │
 ├── notebooks
-│   └── Social_Medial_Final.ipynb
+│ └── Social_Medial_Final.ipynb
 │
 ├── python
-│   ├── graphrag.py
-│   └── gptapi.py
+│ ├── graphrag.py
+│ └── gptapi.py
 │
 ├── neo4j
-│   ├── cypher_queries.cypher
-│   ├── graph_schema.md
-│   └── import_instructions.md
+│ ├── cypher_queries.cypher
+│ ├── graph_schema.md
+│ └── import_instructions.md
 │
 ├── diagrams
-│   ├── architecture.png
-│   ├── graph_schema.png
-│   ├── network_visualization.png
-│   └── graphrag_demo.png
+│ ├── architecture.png
+│ ├── graph_schema.png
+│ ├── network_visualization.png
+│ └── graphrag_demo.png
 │
 ├── data
-│   └── dataset_info.md
+│ └── dataset_info.md
 │
 ├── requirements.txt
 └── README.md
@@ -342,3 +342,13 @@ The system converts natural language questions into **Cypher queries executed on
 
 
 This project demonstrates how **graph analytics and large language models can be combined** to analyze large-scale social networks.
+
+
+## Future Improvements
+
+Potential extensions of this work include:
+
+• Implementing **Graph Neural Networks (GNNs)** for link prediction  
+• Adding **community detection algorithms** for deeper network insights  
+• Deploying the system as an **interactive web application**  
+• Scaling the pipeline using **distributed graph processing frameworks**
