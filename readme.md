@@ -164,3 +164,99 @@ Users can ask questions such as:
 - Tell me about user 132119
 
 ### GraphRAG Pipeline
+
+User Question
+↓
+GPT interprets question
+↓
+Graph tool selected
+↓
+Cypher query executed in Neo4j
+↓
+Results returned
+↓
+GPT generates explanation
+
+
+
+Example interaction:
+
+![GraphRAG Demo](diagrams/graphrag_demo.png)
+
+---
+
+# Key Results
+
+### Homophily Analysis
+
+Homophily Lift ≈ **1.04**
+
+This indicates that users connected in the similarity graph share **slightly more behavioral similarity than random user pairs**.
+
+### Influence Analysis
+
+Influence Lift ≈ **5.42**
+
+This indicates **strong evidence that users influence each other's tag adoption behavior**.
+
+Users are significantly more likely to adopt tags previously used by their neighbors.
+
+---
+
+# Repository Structure
+social-media-graph-analytics-graphrag
+│
+├── notebooks
+│ └── Social_Medial_Final_Updated.ipynb
+│
+├── python
+│ └── gptapi.py
+│
+├── diagrams
+│ ├── architecture.png
+│ ├── graph_schema.png
+│ ├── network_visualization.png
+│ └── graphrag_demo.png
+│
+├── README.md
+├── requirements.txt
+
+
+
+---
+
+# Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Neo4j
+- Cypher Query Language
+- OpenAI GPT API
+- GraphRAG Architecture
+
+---
+
+# Author
+
+**Rohan Chimne**  
+MS Business Analytics  
+McCombs School of Business  
+University of Texas at Austin
+
+---
+
+# Demo
+
+Example interaction with the GraphRAG system:
+
+User: Who are the most connected users?
+
+GraphRAG:
+User 132119 – 30 connections
+User 103945 – 28 connections
+User 127339 – 28 connections
+
+
+
+The system converts natural language questions into **Cypher queries executed on the Neo4j graph database**.
