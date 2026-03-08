@@ -258,32 +258,9 @@ Users are significantly more likely to adopt tags previously used by their neigh
 
 # Repository Structure
 
-social-media-graph-analytics-graphrag
-│
-├── notebooks
-│ └── Social_Medial_Final.ipynb
-│
-├── python
-│ ├── graphrag.py
-│ └── gptapi.py
-│
-├── neo4j
-│ ├── cypher_queries.cypher
-│ ├── graph_schema.md
-│ └── import_instructions.md
-│
-├── diagrams
-│ ├── architecture.png
-│ ├── graph_schema.png
-│ ├── network_visualization.png
-│ └── graphrag_demo.png
-│
-├── data
-│ └── dataset_info.md
-│
-├── requirements.txt
-└── README.md
+The project repository is organized as follows:
 
+![Repository Structure](diagrams/repo_structure.png)
 
 
 ---
