@@ -94,7 +94,7 @@ The system combines **large-scale data processing, graph analytics, and AI-power
 
 The project follows a complete data-to-AI pipeline combining large-scale data processing, graph analytics, and AI-powered querying.
 
-![Project Pipeline](diagrams/architecture.png)
+![End-to-End Pipeline](diagrams/pipeline.png)
 
 ### Pipeline Steps
 
